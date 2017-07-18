@@ -56,3 +56,7 @@
    kept-new-versions 6
    kept-old-versions 2
    version-control t)       ; use versioned backups
+
+;; theme setting
+(load-theme 'zenburn t)
+(global-linum-mode t)
