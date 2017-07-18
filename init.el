@@ -60,3 +60,19 @@
 ;; theme setting
 (load-theme 'zenburn t)
 (global-linum-mode t)
+
+;; chinese-wbim
+(autoload 'chinese-wbim-use-package "chinese-wbim" "Another emacs input method")
+;; Tooltip 暂时还不好用
+(setq chinese-wbim-use-tooltip nil)
+
+(register-input-method
+ "chinese-wbim" "euc-cn" 'chinese-wbim-use-package
+ "五笔" "汉字五笔输入法" "wb.txt")
+
+;; 用 ; 暂时输入英文
+(require 'chinese-wbim-extra)
+(global-set-key ";" 'chinese-wbim-insert-ascii)
+
+;设置默认输入法
+(setq default-input-method 'chinese-wbim)
