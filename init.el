@@ -3,6 +3,7 @@
          '("melpa" . "http://melpa.org/packages/") t)
 
 (package-initialize)
+(elpy-enable)
 
 (when (not package-archive-contents)
     (package-refresh-contents))
